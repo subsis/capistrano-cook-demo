@@ -19,8 +19,8 @@ gem 'responds_to_parent', :git => "https://github.com/LessonPlanet/responds_to_p
 # gem 'sqlite3'
 gem 'pg', '~> 0.12.2'
 
-group :heroku do
-  gem 'unicorn', :platform => :ruby
+group :production do
+  gem 'unicorn'
 end
 
 # Gems used only for assets and not required
@@ -33,7 +33,7 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'ruby-debug',   :platform => :mri_18
-  gem 'ruby-debug19', :platform => :mri_19, :require => 'ruby-debug'
+  gem 'capistrano'
+  gem 'capistrano-cook', :git => "git@github.com:subsis/capistrano-cook.git"
 end
 
